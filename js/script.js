@@ -82,7 +82,7 @@ ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { ori
 function sendEmail() {
   Email.send({
       Host: "smtp.gmail.com",
-      Username: "prasannaswar.n.a.m@gmail.com",
+      Username: "prasannaswarnam@gmail.com",
       Password: "mpceevmldcvdsxcg",
       To: "prasannaswarnam@gmail.com",
       // From : "e1215024govardancse@gmail.com",
