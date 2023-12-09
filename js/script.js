@@ -79,3 +79,23 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+function sendEmail() {
+  Email.send({
+      Host: "smtp.gmail.com",
+      Username: "e1215024govardan.n.a.cs@gmail.com",
+      Password: "mpceevmldcvdsxcg",
+      To: "e1215024govardancse@gmail.com",
+      // From : "e1215024govardancse@gmail.com",
+      From: document.getElementById("email").value,
+      Subject: "New Contact Form Enquiry",
+      Body: "Name: " + document.getElementById("name").value +
+          "<br> Email: " + document.getElementById("email").value +
+          "<br> Phone: " + document.getElementById("phone").value +
+          "<br> Message: " + document.getElementById("message").value 
+  }).then(
+      message => {
+          alert("Message Sent Successfully");
+          resetForm();
+      }
+  );
+}
